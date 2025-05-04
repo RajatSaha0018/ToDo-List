@@ -445,4 +445,21 @@ textarea {
     #but1 {
         width: 102%;
     }
+        .smallButton {
+        /* background-color: rgb(202, 154, 154); */
+        width: 70%;
+        margin-left: 0vh;
+        text-align: center;
+        align-items: center;
+        margin-right: 2px;
+    
+        padding: 0;
+    }
+    
+    .crossButton {
+        width: 20%;
+        margin: auto;
+        padding: 0 0 0 0;
+        height: 0;
+    }
 }
