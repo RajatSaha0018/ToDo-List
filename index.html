@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body onload="loaddata()">
+    <div class="EveCreator" id="left">
+
+        <p class="InfoInput">Choose Date</p>
+        <input type="date" placeholder="Enter Event Date" id="date" required>
+        <br>
+
+        <p class="InfoInput">Event Name</p>
+
+        <input type="text" placeholder="Enter Your Event Name" id="name" oninput="tCount(this,30)" required
+            maxlength="30">
+
+        <p class="CharLeft">
+        <div class="textRemaining">30</div>/30 Character Left</p>
+
+        <p class="FixPara">Start Time</p>
+        <input type="time" placeholder="Start Time" id="stime" required>
+        <br>
+
+        <p class="InfoInput">End Time</p>
+        <input type="time" placeholder="End Time" id="edate" required>
+        <br>
+
+        <p class="InfoInput">Description</p>
+        <textarea cols="40" rows="5" placeholder="Enter Event Details" id="description" oninput="tCount(this,300)"
+            required maxlength="300"> </textarea>
+
+        <p class="CharLeft">
+        <div class="textRemaining">300</div>/300 Character Left</p>
+
+        <input type="submit" value="Create your Event &#11146;" class="createButton" id="but1" onclick="addData(this)">
+
+    </div>
+
+    <div class="EveDisplay" id="right">
+        <p class="viewTitle">Your Events Lists</p>
+        <div class="viewTime"><input type="date" title="Select Your Date" class="searchDate" required>
+
+            <button class="smallButton" onclick="getData(this)">Search</button>
+            <button class="crossButton" onclick="loaddata()">X</button>
+
+        </div>
+
+        <div id="BoxContainer">
+        </div>
+
+    </div>
+    <br>
+</body>
+
+</html>
